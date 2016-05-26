@@ -198,7 +198,10 @@ IB_DESIGNABLE
 /**
  The amount to kern the next character. Default is standard kerning. If this attribute is set to 0.0, no kerning is done at all.
  */
-@property (nonatomic, assign) IBInspectable CGFloat kern;
+
+// LL 5-26-2016: Remove the kern property since even leaving it at the default of 0.0 prevents Core Text from doing its default kerning, at least using the San Francisco font in iOS 9.
+
+//@property (nonatomic, assign) IBInspectable CGFloat kern;
 
 ///--------------------------------------------
 /// @name Acccessing Paragraph Style Attributes
